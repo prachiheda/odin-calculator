@@ -51,13 +51,45 @@ button:hover {
 }
 
 
-
 #equals {
     grid-column: span 2;
     background: #2ECC40;
 }
 
+#clear {
+    grid-column: span 2;
+
+}
+
 
 #equals:hover {
     background: #1d9d31;
+}
+
+.calculator-screen {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack "last operation" and "current operation" vertically */
+    justify-content: space-between; /* Add spacing between the two sections */
+    align-items: flex-end; /* Align text to the right */
+    background-color: #f4f4f4; /* Light gray background */
+    padding: 10px; /* Add some padding inside the screen */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Add a subtle border */
+    margin-bottom: 20px; /* Spacing below the screen */
+    width: 100%; /* Make the screen fill the container */
+    height: 100px; /* Set a fixed height */
+    box-sizing: border-box; /* Include padding in height/width calculations */
+    font-family: Arial, sans-serif; /* Set a clean font */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.screen-last {
+    font-size: 0.8em; /* Smaller text for the last operation */
+    color: #999; /* Gray color for distinction */
+}
+
+.screen-current {
+    font-size: 1.5em; /* Larger text for the current operation */
+    font-weight: bold; /* Bold for emphasis */
+    color: #333; /* Dark text color */
 }
